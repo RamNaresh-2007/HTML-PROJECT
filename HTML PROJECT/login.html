@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Students Coaching Platform</title>
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+    <h1>Students login Portal</h1>
+    <div class="box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Icon">
+        <h2>Login Page</h2>
+        <input type="text" id="name" placeholder="Enter Name"><br><br>
+        <input type="email" id="email" placeholder="Enter Email"><br><br>
+        <input type="password" id="password" placeholder="Enter Password"><br><br>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            var emailid = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if (emailid === "" || password === "") {
+                alert("Please enter Email ID and Password");
+            } else if (emailid === "ram@gmail.com" && password === "2007") {
+                alert("Login Successful");
+                window.location.href = "project.html";
+            } else {
+                alert("Login Failed");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentorship & Coaching Platform</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<header>
+  <h1>Mentorship & Coaching Platform</h1>
+  <p>Empowering growth through guidance</p>
+</header>
+
+<nav>
+  <a onclick="showPage('admin')">Admin Panel</a>
+  <a onclick="showPage('mentee')">Mentee Dashboard</a>
+  <a onclick="showPage('exam')">Exams</a>
+  <a onclick="showPage('fees')">Fees</a>
+</nav>
+
+<!-- Admin Panel -->
+<section id="admin" class="active">
+  <h2>👨‍💼 Admin Panel</h2>
+  <div class="card">
+    <h3>Match Mentors with Mentees</h3>
+    <p>Select mentors and assign them to mentees based on interests and goals.</p>
+    <button onclick="showPage('matchPage')">Match Now</button>
+  </div>
+  <div class="card">
+    <h3>Manage Mentorship Sessions</h3>
+    <p>View upcoming sessions and edit schedules.</p>
+    <button onclick="showPage('sessionsPage')">Manage Sessions</button>
+  </div>
+  <div class="card">
+    <h3>Track Progress</h3>
+    <p>Monitor mentee development and feedback.</p>
+    <button onclick="showPage('reportsPage')">View Reports</button>
+  </div>
+</section>
+
+<!-- Mentee Dashboard -->
+<section id="mentee">
+  <h2>🙋‍♀ Mentee Dashboard</h2>
+  <div class="card">
+    <h3>Connect with Mentors</h3>
+    <p>Browse mentor profiles and send connection requests.</p>
+    <button onclick="showPage('mentorsPage')">Find Mentors</button>
+  </div>
+  <div class="card">
+    <h3>Schedule Sessions</h3>
+    <p>Book time slots for mentorship meetings.</p>
+    <button onclick="showPage('schedulePage')">Schedule Now</button>
+  </div>
+  <div class="card">
+    <h3>Track Development</h3>
+    <p>View your progress and set new goals.</p>
+    <button onclick="showPage('progressPage')">View Progress</button>
+  </div>
+</section>
+
+<!-- Exams -->
+<section id="exam">
+  <h2>📝 Exams</h2>
+  <div class="card">
+    <h3>Take Exam</h3>
+    <p>Attempt scheduled exams to test your knowledge and skills.</p>
+    <button onclick="showPage('examPage')">Take Test</button>
+  </div>
+  <div class="card">
+    <h3>Exam Results</h3>
+    <p>View your scores and performance feedback.</p>
+    <button onclick="showPage('resultsPage')">View Results</button>
+  </div>
+</section>
+
+<!-- Fees -->
+<section id="fees">
+  <h2>💰 Fees</h2>
+  <div class="card">
+    <h3>Fee Due</h3>
+    <p>Check pending fees and due dates.</p>
+    <button onclick="showPage('feesPage')">View Fee Status</button>
+  </div>
+  <div class="card">
+    <h3>Pay Fee</h3>
+    <p>Pay securely using credit/debit card, UPI, or net banking.</p>
+    <button onclick="showPage('payPage')">Pay Now</button>
+  </div>
+</section>
+
+<!-- Extra content pages -->
+<section id="matchPage">
+  <h2>🔗 Match Mentors</h2>
+  <p>Here you can assign mentors to mentees based on their interests and goals.</p>
+  <button onclick="showPage('admin')">⬅ Back</button>
+</section>
+
+<section id="sessionsPage">
+  <h2>📅 Manage Sessions</h2>
+  <p>View and edit upcoming mentorship sessions here.</p>
+  <button onclick="showPage('admin')">⬅ Back</button>
+</section>
+
+<section id="reportsPage">
+  <h2>📊 Progress Reports</h2>
+  <p>Track mentee development and feedback reports.</p>
+  <button onclick="showPage('admin')">⬅ Back</button>
+</section>
+
+<section id="mentorsPage">
+  <h2>👥 Find Mentors</h2>
+  <p>Browse mentor profiles and send connection requests.</p>
+  <button onclick="showPage('mentee')">⬅ Back</button>
+</section>
+
+<section id="schedulePage">
+  <h2>📆 Schedule Sessions</h2>
+  <p>Book mentorship meetings and manage your calendar.</p>
+  <button onclick="showPage('mentee')">⬅ Back</button>
+</section>
+
+<section id="progressPage">
+  <h2>🚀 Track Development</h2>
+  <p>View your progress and set new goals here.</p>
+  <button onclick="showPage('mentee')">⬅ Back</button>
+</section>
+
+<section id="examPage">
+  <h2>📝 Take Exam</h2>
+  <p>Answer the following questions to test your knowledge.</p>
+  <button>Start Exam</button>
+  <br><br>
+  <button onclick="showPage('exam')">⬅ Back</button>
+</section>
+
+<section id="resultsPage">
+  <h2>📄 Exam Results</h2>
+  <p>Your scores and feedback will appear here.</p>
+  <button onclick="showPage('exam')">⬅ Back</button>
+</section>
+
+<section id="feesPage">
+  <h2>💰 Fee Status</h2>
+  <p>Check pending fees and due dates here.</p>
+  <button onclick="showPage('fees')">⬅ Back</button>
+</section>
+
+<section id="payPage">
+  <h2>💳 Pay Fees</h2>
+  <p>Pay securely using credit/debit card, UPI, or net banking.</p>
+  <button>Proceed to Payment</button>
+  <br><br>
+  <button onclick="showPage('fees')">⬅ Back</button>
+</section>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll('section').forEach(page => {
+      page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
